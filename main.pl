@@ -41,5 +41,5 @@ placeone(C:P,[],[C:P]).
 search3(B,[_:[B|Tail]|_]):-!,write('Результат роботи A*-пошуку'),nl,show([B|Tail]),nl.
 search3(B,[H|Tail]):-findall(Z,prolong(H,Z,B),L),place(L,Tail,New),search3(B,New).
  
-all(A):-B=[b,b,b,b,a,a,a,a,'_','_'],
+solution(A):-B=[b,b,b,b,a,a,a,a,'_','_'],
     depth(A,B),width(A,B),searchA(A,B).
